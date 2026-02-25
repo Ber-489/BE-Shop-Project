@@ -10,9 +10,11 @@ global using Application.Common.Models;
 global using Application.Orders.Create;
 global using Application.Features.Authenticates.Commands.SendRegisterOtp;
 global using Application.Features.Authenticates.Commands.VerifyOtp;
+global using Application.Features.Devices.Commands.CreateDevice;
 global using Application.Features.Accounts.Queries;
 global using Application.Features.Authenticates.Dtos;
 global using Application.Features.Accounts.Dtos;
+global using Application.Features.Devices.Dtos;
 
 global using Serilog;
 global using Carter;

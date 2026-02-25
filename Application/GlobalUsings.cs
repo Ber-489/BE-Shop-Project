@@ -16,6 +16,7 @@ global using Application.Common.Logging;
 global using Application.Common.Models;
 global using Application.Features.Authenticates.Dtos;
 global using Application.Features.Accounts.Dtos;
+global using Application.Features.Devices.Dtos;
 
 global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.Extensions.Logging;

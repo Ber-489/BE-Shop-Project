@@ -54,6 +54,9 @@ try
     builder.Services.Configure<OtpSettings>(
     builder.Configuration.GetSection("OtpSettings"));
 
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen();
+
     var app = builder.Build();
 
     // HTTP pipeline

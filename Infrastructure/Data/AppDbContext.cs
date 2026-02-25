@@ -16,4 +16,5 @@ public class AppDbContext : DbContext
             typeof(AppDbContext).Assembly
         );
     }
+    public DbSet<Device> Devices => Set<Device>();
 }
