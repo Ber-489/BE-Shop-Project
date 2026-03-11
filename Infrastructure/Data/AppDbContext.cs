@@ -17,4 +17,5 @@ public class AppDbContext : DbContext
         );
     }
     public DbSet<Device> Devices => Set<Device>();
+    public DbSet<Domain.Entities.ExcelRow> ExcelRows => Set<Domain.Entities.ExcelRow>();
 }

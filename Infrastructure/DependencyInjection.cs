@@ -46,6 +46,10 @@ public static class DependencyInjection
 
         services.AddScoped<IDeviceRepository, DeviceRepository>();
 
+        services.AddScoped<IExcelService, ExcelService>();
+
+        services.AddScoped<IExcelRepository, ExcelRepository>();
+
         return services;
     }
 }

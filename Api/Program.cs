@@ -56,6 +56,9 @@ try
 
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
+    
+    // Đăng ký ExcelService
+    builder.Services.AddScoped<IExcelService, ExcelService>();
 
     var app = builder.Build();
 

@@ -10,6 +10,7 @@ global using Infrastructure.Data;
 global using Infrastructure.Repositories;
 global using Infrastructure.Jobs;
 global using Infrastructure.Logging;
+global using Infrastructure.Services;
 
 global using Application.Common.Interfaces;
 global using Application.Common.Logging;
@@ -18,3 +19,5 @@ global using Domain.Entities;
 
 global using Hangfire;
 global using Hangfire.PostgreSql;
+
+global using OfficeOpenXml;

@@ -12,15 +12,20 @@ public class CreateDeviceEndpoint : ICarterModule
     {
         app.MapPost("/api/devices",
             async (
-                [FromHeader(Name = "X-Store-Id")] Guid storeId,
-                [FromHeader(Name = "X-Branch-Id")] Guid branchId,
+                [FromHeader(Name = "X-Store-Id")] Guid? storeId,
+                [FromHeader(Name = "X-Branch-Id")] Guid? branchId,
                 CreateDeviceRequest request,
                 IMediator mediator) =>
             {
+                if (storeId is null || branchId is null)
+                {
+                    return Results.BadRequest("X-Store-Id and X-Branch-Id are required");
+                }
+
                 var result = await mediator.Send(
                     new CreateDeviceCommand(
-                        storeId,
-                        branchId,
+                        storeId.Value,
+                        branchId.Value,
                         request.Name,
                         request.SerialNumber,
                         request.WifiSSID,
