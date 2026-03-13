@@ -60,6 +60,12 @@ try
     // Đăng ký ExcelService
     builder.Services.AddScoped<IExcelService, ExcelService>();
 
+    // Đăng ký CsvService
+    builder.Services.AddScoped<ICsvService, CsvService>();
+
+    // Đăng ký ReportService
+    DevExpress.Drawing.Internal.DXDrawingEngine.ForceSkia();
+
     var app = builder.Build();
 
     // HTTP pipeline

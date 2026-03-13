@@ -49,6 +49,8 @@ public static class DependencyInjection
         services.AddScoped<IExcelService, ExcelService>();
 
         services.AddScoped<IExcelRepository, ExcelRepository>();
+        
+        services.AddScoped<IReportService, ReportService>();
 
         return services;
     }
